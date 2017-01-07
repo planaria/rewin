@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{68c8223a-a167-4dfa-b48c-80014104fd69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{80584138-fedd-4731-8266-cea7054f8bc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\exception">
+      <UniqueIdentifier>{dc0b29fb-906e-4aef-a7e4-181da58b6f11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\reactive">
+      <UniqueIdentifier>{8e6f221a-48cd-4a7c-a591-b4f40acf96ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\reactive\detail">
+      <UniqueIdentifier>{7f277412-b734-4b5b-9130-e2d4102f38d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\window">
+      <UniqueIdentifier>{383695aa-8669-4adc-9f74-3f282fb01df7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\window\views">
+      <UniqueIdentifier>{5ac54501-de99-4500-a2e9-18f7d3fa1ab5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\window\views\detail">
+      <UniqueIdentifier>{8024c084-dae5-48d1-8a2f-3d83c7e2d65f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\window\detail">
+      <UniqueIdentifier>{46c42cbc-58ca-4ebc-b250-0f2d1fd5012c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\scheduler">
+      <UniqueIdentifier>{93128aec-74d1-4276-bf98-3a1634cdf48c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\scheduler\schedulers">
+      <UniqueIdentifier>{bb16213d-1ade-4e1d-8d6e-f2fbc562e222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\scheduler\schedulables">
+      <UniqueIdentifier>{0c83b82b-5b0e-4900-b9c8-78f6054838d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\scheduler\detail">
+      <UniqueIdentifier>{94f4611e-f502-46cf-8168-e06859fccad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\util">
+      <UniqueIdentifier>{c4dc0009-b564-425c-9743-db47c6e8b6a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\observation">
+      <UniqueIdentifier>{a2563f66-580f-41c6-ba99-8e5ccaa2decb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\observation\detail">
+      <UniqueIdentifier>{8027e8e0-5ee7-41d4-af1a-d66007749629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\data">
+      <UniqueIdentifier>{588e9a5b-27eb-4e0a-a7e0-33ab15212a5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\command">
+      <UniqueIdentifier>{a5aef4da-9d5b-4283-87eb-059df21e4702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\command\messages">
+      <UniqueIdentifier>{1f12d0a9-b102-46d0-a374-9d82b02189be}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\win32_exception.hpp">
+      <Filter>include\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\exception.hpp">
+      <Filter>include\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive.hpp">
+      <Filter>include\reactive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive_functions.hpp">
+      <Filter>include\reactive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive_property.hpp">
+      <Filter>include\reactive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive_subscription.hpp">
+      <Filter>include\reactive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive_node.hpp">
+      <Filter>include\reactive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive_node_combine.hpp">
+      <Filter>include\reactive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive_node_constant.hpp">
+      <Filter>include\reactive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive_node_map.hpp">
+      <Filter>include\reactive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive_node_variable.hpp">
+      <Filter>include\reactive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\window.hpp">
+      <Filter>include\window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\schedulable.hpp">
+      <Filter>include\scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\message_loop.hpp">
+      <Filter>include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\tuple_util.hpp">
+      <Filter>include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\unsubscriber.hpp">
+      <Filter>include\reactive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\observation.hpp">
+      <Filter>include\observation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\observation_base.hpp">
+      <Filter>include\observation\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\view.hpp">
+      <Filter>include\window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\stack_view.hpp">
+      <Filter>include\window\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\orientation.hpp">
+      <Filter>include\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\direction.hpp">
+      <Filter>include\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive_node_switch_on_next.hpp">
+      <Filter>include\reactive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\limit_view.hpp">
+      <Filter>include\window\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\rectangle_view.hpp">
+      <Filter>include\window\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\brush.hpp">
+      <Filter>include\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\dock_view.hpp">
+      <Filter>include\window\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\stack_view_base.hpp">
+      <Filter>include\window\views\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\contents_view.hpp">
+      <Filter>include\window\views\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\text_view.hpp">
+      <Filter>include\window\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\text_box_view.hpp">
+      <Filter>include\window\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\text_info.hpp">
+      <Filter>include\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\ssa_deleter.hpp">
+      <Filter>include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\mouse_button.hpp">
+      <Filter>include\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\mouse_action.hpp">
+      <Filter>include\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\wtl_util.hpp">
+      <Filter>include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\view_iterator.hpp">
+      <Filter>include\window\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive_node_scan.hpp">
+      <Filter>include\reactive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive_node_distinct.hpp">
+      <Filter>include\reactive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\reactive_node_timer.hpp">
+      <Filter>include\reactive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\schedulable_signal.hpp">
+      <Filter>include\scheduler\schedulables</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\window_scheduler.hpp">
+      <Filter>include\scheduler\schedulers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\window_scheduler_impl.hpp">
+      <Filter>include\scheduler\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\clipboard.hpp">
+      <Filter>include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\ime_context.hpp">
+      <Filter>include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\font.hpp">
+      <Filter>include\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\button_view.hpp">
+      <Filter>include\window\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\margin_view.hpp">
+      <Filter>include\window\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\margin.hpp">
+      <Filter>include\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\view_hooks.hpp">
+      <Filter>include\window\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\view_impl.hpp">
+      <Filter>include\window\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\fill_view.hpp">
+      <Filter>include\window\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\view_messages.hpp">
+      <Filter>include\command\messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\command.hpp">
+      <Filter>include\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\function_command.hpp">
+      <Filter>include\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\scroll_bar_view.hpp">
+      <Filter>include\window\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\scroll_info.hpp">
+      <Filter>include\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\scroll_view.hpp">
+      <Filter>include\window\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\clip_view.hpp">
+      <Filter>include\window\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rewin\rewin.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
