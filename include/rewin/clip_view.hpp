@@ -38,62 +38,64 @@ namespace rewin
 			*this += contents().as_reactive()
 				.subscribe([&](const auto& contents)
 			{
-				auto rect_h = clip_horizontal().as_reactive()
-					.map([&](bool clip)
+				auto rect_h = combine(
+					rect_arranged_horizontal().as_reactive(),
+					clip_horizontal().as_reactive(),
+					minimized_width().as_reactive(),
+					offset_x().as_reactive())
+					.map([](const auto& t)
 				{
-					if (clip)
-					{
-						return
-							combine(
-								rect_arranged_horizontal().as_reactive(),
-								minimized_width().as_reactive(),
-								offset_x().as_reactive())
-							.map([](const auto& t)
-						{
-							const WTL::CRect& rect = std::get<0>(t);
-							int width = std::get<1>(t);
-							int offset = std::get<2>(t);
+					const WTL::CRect& rect = std::get<0>(t);
+					bool clip_horizontal = std::get<1>(t);
+					int width = std::get<2>(t);
+					int offset_x = std::get<3>(t);
 
-							WTL::CRect r = rect;
-							r.left -= offset;
-							r.right = r.left + std::max(width, r.Width());
-							return r;
-						});
-					}
-					else
-					{
-						return rect_arranged_horizontal().as_reactive();
-					}
-				}).switch_on_next();
+					WTL::CRect r = rect;
 
-				auto rect_v = clip_vertical().as_reactive()
-					.map([&](bool clip)
+					if (clip_horizontal)
+					{
+						r.left -= offset_x;
+						r.right = r.left + std::max(width, r.Width());
+					}
+
+					return r;
+				});
+
+				auto rect_v = combine(
+					rect_arranged_vertical().as_reactive(),
+					clip_horizontal().as_reactive(),
+					clip_vertical().as_reactive(),
+					minimized_width().as_reactive(),
+					minimized_height().as_reactive(),
+					offset_x().as_reactive(),
+					offset_y().as_reactive())
+					.map([](const auto& t)
 				{
-					if (clip)
-					{
-						return
-							combine(
-								rect_arranged_vertical().as_reactive(),
-								minimized_height().as_reactive(),
-								offset_y().as_reactive())
-							.map([](const auto& t)
-						{
-							const WTL::CRect& rect = std::get<0>(t);
-							int height = std::get<1>(t);
-							int offset = std::get<2>(t);
+					const WTL::CRect& rect = std::get<0>(t);
+					bool clip_horizontal = std::get<1>(t);
+					bool clip_vertical = std::get<2>(t);
+					int width = std::get<3>(t);
+					int height = std::get<4>(t);
+					int offset_x = std::get<5>(t);
+					int offset_y = std::get<6>(t);
 
-							WTL::CRect r = rect;
-							r.top -= offset;
-							r.bottom = r.top + std::max(height, r.Height());
-							return r;
-						});
-					}
-					else
-					{
-						return rect_arranged_vertical().as_reactive();
-					}
-				}).switch_on_next();
+					WTL::CRect r = rect;
 
+					if (clip_horizontal)
+					{
+						r.left -= offset_x;
+						r.right = r.left + std::max(width, r.Width());
+					}
+
+					if (clip_vertical)
+					{
+						r.top -= offset_y;
+						r.bottom = r.top + std::max(height, r.Height());
+					}
+
+					return r;
+				});
+				
 				for (const auto& content : contents)
 				{
 					content->rect_arranged_horizontal() = rect_h;
